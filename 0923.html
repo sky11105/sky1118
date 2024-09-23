@@ -14,10 +14,29 @@
     }
     */  
     /*選擇器種類
-      HTML_tag{  }
       #id{        }
       .class{     }
+      HTML_tag{  }
+
       */
+      /*
+       顏色
+         1.color name
+         2.#色碼 #RRGGBB 00~FF
+         3.rgb(r.g.b) 0~255
+         4.rgba(r.g.b.a) a:可見度 0~15
+         5.hsl(色相,彩度,亮度)
+         6.hsla(0~360,0~100%,0~100%,0~1)
+      */
+      /*
+        前景:文字顏色(color)
+        背景:(backround)
+            顏色(backround-color)
+            圖像(backround-image)
+      
+      
+      */
+      
     P{
       margin: 0;
 
@@ -28,7 +47,7 @@
 
     }
     span{
-          background-color: azure;
+        background-color: #f00505;
 
     }
    #sp1{
@@ -50,6 +69,30 @@
    }
    .cs1{
     
+
+   }
+   div{
+    background-color: yellow;
+    width:300px;
+    height:50px;
+    margin-bottom: 10px;
+   }
+   /*
+   漸層 not a color ,is aimage
+   1線性漸層 linear-gradient()
+   2放射漸層
+   3元諄見曾
+   to top/right/top/bottom/left=> 0~360edg
+   */
+   #d1{
+      background: linear-gradient(125edg,red,yellow);
+
+
+   }
+   #d2{
+       background-image: linear-gradient(90edg,red,orange,yellow,green,blue,indigo,violet);
+
+
 
    }
     </style>
