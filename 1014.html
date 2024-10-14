@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>sprite css</title>
+        <meta charset="UTF-8">
+        <style>
+            @keyframes role1walk {
+                0%{background-position-x: 0px;}
+                100%{background-position-x: -144px;}
+            }
+            #role1{
+                background-image:  url("sprite1.png");/*高跟寬引響角色數*/
+                width: 48px;
+                height: 72px;
+                animation: role1walk 1s steps(3) infinite;
+
+            }
+            #role2{
+                background-image: url("sprite1.png");
+                width: 48px;
+                height: 72px;
+                animation: role1walk 1s steps(3) infinite;
+                background-position-y: -360px ;
+ 
+            }
+        </style>
+    </head>
+    <body>
+    <div id="role1"></div>
+    <div id="role2"></div>
+</body>
+</html>
