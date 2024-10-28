@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>表單控制項</title>
+        <meta charset="UTF-8">
+        <script>
+            function get(id){
+                    return document.getElementById(id)
+            }
+            function changeFonSize(){
+                get("range_num").innerHTML=get("rg_font_size").value="pt";
+                get("mytext").style.fontSize=get("rg_font_size").value="pt";
+            }
+            function changeFontColor(){
+                get("mytext").style.color=get("color_font").value;
+            }
+        </script>
+        <STYLE>
+            input {
+                display: block;
+                margin: 5px 0;
+            }
+            #mytext{
+               font-size: 20pt;
+               color: black;
+            }
+        </STYLE>
+    </head>
+    <body>
+           <div id="mytext">我的文字</div>
+           <input type="text">
+           <input type="range" id="rg_font_size" style="display: inline;" min="6" max="20" value="20" oninput="changeFonSize();">
+           <span id="range_num">20</span>
+
+    </body>
+</html>
