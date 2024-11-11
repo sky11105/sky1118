@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>1111上課筆記</title>
+    <meta charset="UTF-8">
+    <STYLE>
+       #board{
+        display: grid;
+        grid: repeat(3,80px) / repeat(4,80px);
+       }
+    </STYLE>
+    <script>
+            function get(id){
+                return document.getElementById(id);
+            }
+            function getRandNum(min,mix){
+                return Math.floor(Math.random()*(max-min+1))+min;
+            }
+            function gamestart() {
+                imgs=Array.from(document.getElementsByTagName("img"));
+                ans=[1,1,2,2,3,3,,4,5,5,6,6];
+               setTimeout(clearInterval,3000,setInterval(function(){
+                ans.sort(function(a,b){
+                    return Math.random()-0.5;
+                });
+                for(i=0; i<imgs.length; i++){
+                    imgs[i].src=`pic/${ans[i]}.png`;
+                }
+
+                    
+                
+               },50));
+               setTimeout(function(){
+                imgs.ForEach(function(a){
+                    a.src="0.png"
+                });
+               },6000);
+               x1=0;x2=0;
+        }
+        function guess(){
+            i=imgs.indexOF(event.target);
+            imgs[i].src=`pic/${ans[i]}.png`;
+            if(x1==-1){
+                x1=i;
+                imgs[i].src=`pic/${ans[i]}.pnd`;
+            }else if(x2==-1) {
+                x2 = i;
+                setTimeout(function(){
+                    x2=ans[i];
+                if(ans[x1] !=ans[x2]){
+                    a.src="0.png"
+                }
+                })
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="board">
+    <img src="0.png" onclick="guess(0);">
+    <img src="0.png" onclick="guess(1);">
+    <img src="0.png" onclick="guess(2);">
+    <img src="0.png" onclick="guess(3);">
+    <img src="0.png" onclick="guess(4);">
+    <img src="0.png" onclick="guess(5);">
+    <img src="0.png" onclick="guess(6);">
+    <img src="0.png" onclick="guess(7);">
+    <img src="0.png" onclick="guess(8);">
+    <img src="0.png" onclick="guess(9);">
+    <img src="0.png" onclick="guess(10);">
+    <img src="0.png" onclick="guess(11);">
+    <img src="0.png" onclick="guess(12);">
+    </div>
+    <button onclick="gamestart()">洗牌</button>
+</body>
+
+
+
+</html>
