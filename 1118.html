@@ -79,6 +79,7 @@
                 x.style.backgroundColor=`hsl(${getRandNum(0,360)},80%,50%)`;
                 x.addEventListener("click",hitTarget);
                 get("board").appendChild(x);
+               
             }
            function gamestart(){
             gameing=true;
@@ -86,11 +87,20 @@
             tbwidth=800;
             gameTimer=setInterval(newTarget,1000);
             targetTimer=setInterval(timeCoumtdown,100)
+            topscore=localStorage.getItem("topscore");
+            if(topscore) topscore=parseInt(topscore)
+            else topscore=0
+            get("topscore").innerHTML=topscore;
            }
            function gamestop(){
             gameing=false;
             clearInterval(gameTimer)
             clearInterval(targetTimer)
+
+           
+            if(topscore<gameScore) {
+                localStorage.setItem("topScore",gameScore);
+            }
            }
         </Script>
     </head>
