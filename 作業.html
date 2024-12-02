@@ -1,0 +1,38 @@
+
+<html>
+    <head>
+        <title>作業</title>
+        <meta charset="UTF-8">
+        <style>
+         #worldmap{
+            background: url("download.jpg");
+            background-size: 200px 140px;
+            width: 800px;
+            height: 800px;
+           }
+           #role{
+            background-image:  url("images.jpg");/*高跟寬引響角色數*/
+                width: 120px;
+                height: 60px;
+                position: absolute;
+                
+           }
+        </style>
+        <script>
+            function start(){
+            var timer = document.querySelector("#timer");
+            var number = 120;
+            setInterval(function(){
+            number -- ;
+            if(number <= 0 )
+            number = 0;
+            timer.innerText = number + 0 }, 1000);
+}
+        </Script>
+    </head>
+    <body >
+        <div id="timer">
+            120s
+        </div>
+        <button onclick="gamestart();">遊戲開始</button>  
+ </body>
