@@ -1,23 +1,38 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <style>
-            #role{
-            background-image:  url("pic/下載.jpg");/*高跟寬引響角色數*/
-                width: 500px;
-                height: 500px;
-                position: absolute;
-           }
-        </style>
-        <script>
-            
-
-
-        </script>
-
+        <title>比大小</title>
     </head>
+    
+    
     <body>
-        <div id="role"></div>
-
+        <table>
+            <tr>
+                <td><input type="text" id="num"/></td>
+                <td><button onclick="guess()">猜</button></td>
+                <td>
+                    <span id="result">=</span>
+                </td>
+            </tr>
+        </table>
+        <script typ="text/javascrip">
+            var random=parseInt(Math.random()*100+1)
+            function guess(){
+                var numb=document.getElementById('num').value;
+                while(ture){
+                    if(random<numb){
+                        document.getElementById('result').innerHTML=猜大了;
+                    }else if(random>numb){
+                        document.getElementById('result').innerHTML=猜小了;
+                    }if(random=numb){
+                        document.getElementById('result').innerHTML=猜對了;
+                        
+                    }
+                    document.getElementById('result').innerHTML='='+resultObj.value;
+                }
+            }
+        </script>
+        
     </body>
+
 </html>
