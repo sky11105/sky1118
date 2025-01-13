@@ -3,19 +3,7 @@
         <meta charset="UTF-8">
         <title>比大小</title>
     </head>
-    
-    
-    <body>
-        <table>
-            <tr>
-                <td><input type="text" id="num"/></td>
-                <td><button onclick="guess()">猜</button></td>
-                <td>
-                    <span id="result">=</span>
-                </td>
-            </tr>
-        </table>
-        <script typ="text/javascrip">
+    <script typ="text/javascrip">
             var random=parseInt(Math.random()*100+1)
             function guess(){
                 var numb=document.getElementById('num').value;
@@ -32,6 +20,18 @@
                 }
             }
         </script>
+    
+    <body>
+        <table>
+            <tr>
+                <td><input type="text" id="num"/></td>
+                <td><button onclick="guess()">猜</button></td>
+                <td>
+                    <span id="result">=</span>
+                </td>
+            </tr>
+        </table>
+        
         
     </body>
 
